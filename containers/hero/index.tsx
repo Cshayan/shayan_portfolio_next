@@ -1,10 +1,9 @@
 import Button from "@/components/button";
+import Name from "@/components/name";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
 import React from "react";
 import {
-  HeroHeading,
-  HeroHeadingGreen,
   HeroLogoImage,
   Row,
   WhiteText,
@@ -23,9 +22,7 @@ const Hero = (): JSX.Element => {
             <p>
               I <WhiteText>am</WhiteText>
             </p>
-            <HeroHeading>
-              Shayan <HeroHeadingGreen>Chatterjee</HeroHeadingGreen>
-            </HeroHeading>
+            <Name />
             <ViewButtonWrapper>
               <Button buttonText="View my resume" onClick={() => {}} />
             </ViewButtonWrapper>
@@ -38,6 +35,12 @@ const Hero = (): JSX.Element => {
           />
         </Row>
       </Container>
+      <Image
+        src="/assets/polygon_seperator.png"
+        alt="polygon"
+        fill
+        style={{ objectFit: "contain", marginTop: "12em" }}
+      />
     </>
   );
 };
