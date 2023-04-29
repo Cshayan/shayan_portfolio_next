@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: ${(props) => props.theme.fonts.main};
-    font-size: 1.6rem;
+    font-size: ${(props) => props.theme.fontsize.normal};
     background: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.primary};
     cursor: default;
@@ -21,6 +21,15 @@ const GlobalStyles = createGlobalStyle`
   }
   li {
     list-style: none;
+  }
+`;
+
+export const CentralMobileAlign = styled.div`
+  @media ${(props) => props.theme.breakpoints.sm} {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 

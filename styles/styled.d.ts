@@ -10,12 +10,19 @@ declare module "styled-components" {
       primary: string;
       background: string;
       secondary: string;
+      white: string;
     };
     breakpoints: {
       sm: string;
       md: string;
       lg: string;
       xl: string;
+    };
+    fontsize: {
+      heading: string;
+      subheading: string;
+      normal: string;
+      small: string;
     };
   }
 }
