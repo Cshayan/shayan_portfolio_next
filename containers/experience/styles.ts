@@ -61,6 +61,13 @@ export const ExperienceCardStyled = styled.div<IExperienceStyled>`
   padding: 20px;
   margin-top: ${(props) => (props.index % 2 === 0 ? "3em" : "8em")};
   margin-right: 3em;
+  cursor: pointer;
+  outline: solid 0px ${(props) => props.theme.colors.primary};
+  transition: outline 0.4s ease-in;
+
+  &:hover {
+    outline-width: 2px;
+  }
 `;
 
 export const CenterDash = styled.div`

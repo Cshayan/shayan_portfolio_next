@@ -24,3 +24,46 @@ export const EXPERIENCE_LIST = [
     time: "2020 - 2020",
   },
 ];
+
+export const SKILLS_LIST = [
+  {
+    id: 1,
+    logo: "/assets/react.png",
+    title: "React",
+  },
+  {
+    id: 2,
+    logo: "/assets/react_native.png",
+    title: "React Native",
+  },
+  {
+    id: 3,
+    logo: "/assets/javascript.png",
+    title: "JavaScript",
+  },
+  {
+    id: 4,
+    logo: "/assets/typescript.png",
+    title: "TypeScript",
+  },
+  {
+    id: 5,
+    logo: "/assets/html.png",
+    title: "HTML",
+  },
+  {
+    id: 6,
+    logo: "/assets/css.png",
+    title: "CSS",
+  },
+  {
+    id: 7,
+    logo: "/assets/android_studio.png",
+    title: "Android Studio",
+  },
+  {
+    id: 8,
+    logo: "/assets/xcode.png",
+    title: "XCode",
+  },
+];
