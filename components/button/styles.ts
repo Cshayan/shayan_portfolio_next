@@ -13,6 +13,6 @@ export const StyledButton = styled.button`
   }
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.5;
   }
 `;

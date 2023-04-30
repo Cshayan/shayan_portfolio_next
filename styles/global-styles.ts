@@ -33,4 +33,14 @@ export const CentralMobileAlign = styled.div`
   }
 `;
 
+export const WhiteRegularText = styled.p`
+  color: ${(props) => props.theme.colors.white};
+  font-size: ${(props) => props.theme.fontsize.normal};
+`;
+
+export const GreenRegularText = styled.p`
+  color: ${(props) => props.theme.colors.primary};
+  font-size: ${(props) => props.theme.fontsize.normal};
+`;
+
 export default GlobalStyles;
