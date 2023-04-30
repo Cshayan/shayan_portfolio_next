@@ -67,3 +67,24 @@ export const SKILLS_LIST = [
     title: "XCode",
   },
 ];
+
+export const CONTACT_LIST = [
+  {
+    id: 1,
+    val: "linkedin",
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/shayan-chatterjee-a41771167/",
+  },
+  {
+    id: 2,
+    val: "github",
+    title: "GitHub",
+    url: "https://github.com/Cshayan",
+  },
+  {
+    id: 3,
+    val: "medium",
+    title: "medium",
+    url: "https://medium.com/@shayanchatterjee7",
+  },
+];
