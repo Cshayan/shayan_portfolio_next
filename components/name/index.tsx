@@ -1,10 +1,11 @@
 import React from "react";
 import { NameHeading, NameHeadingGreen } from "./styles";
 
-const Name = (): JSX.Element => {
+const Name = ({ showWave = false }): JSX.Element => {
   return (
     <NameHeading>
-      Shayan <NameHeadingGreen>Chatterjee</NameHeadingGreen>
+      Shayan <NameHeadingGreen>Chatterjee</NameHeadingGreen>{" "}
+      {!!showWave && <span>👋</span>}
     </NameHeading>
   );
 };

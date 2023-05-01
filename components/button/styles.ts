@@ -13,6 +13,7 @@ export const StyledButton = styled.button`
   }
 
   &:hover {
-    opacity: 0.5;
+    opacity: 0.6;
+    transition: opacity 0.5s ease-in;
   }
 `;

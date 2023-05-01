@@ -1,6 +1,8 @@
 import Button from "@/components/button";
 import Name from "@/components/name";
 import Navbar from "@/components/navbar";
+import { SKILLS_LIST } from "@/constants/data";
+import { GreenRegularText } from "@/styles/global-styles";
 import Image from "next/image";
 import React from "react";
 import {
@@ -10,9 +12,15 @@ import {
   Container,
   HeroContent,
   ViewButtonWrapper,
+  TechStackIconContainer,
+  TechIcons,
 } from "./styles";
 
 const Hero = (): JSX.Element => {
+  const onResumeViewClick = (): void => {
+    window.open("/ShayanChatterjee_Resume.pdf", "_blank");
+  };
+
   return (
     <>
       <Navbar />
@@ -22,10 +30,25 @@ const Hero = (): JSX.Element => {
             <p>
               I <WhiteText>am</WhiteText>
             </p>
-            <Name />
+            <Name showWave />
             <ViewButtonWrapper>
-              <Button buttonText="View my resume" onClick={() => {}} />
+              <Button buttonText="View my resume" onClick={onResumeViewClick} />
             </ViewButtonWrapper>
+            <TechStackIconContainer margin>
+              <WhiteText>Tech stack </WhiteText>
+              <GreenRegularText style={{ margin: "0 1em" }}>|</GreenRegularText>
+              <TechStackIconContainer>
+                {SKILLS_LIST.map((item) => (
+                  <TechIcons
+                    alt={item.title}
+                    src={item.logo}
+                    width={30}
+                    height={30}
+                    key={item.id}
+                  />
+                ))}
+              </TechStackIconContainer>
+            </TechStackIconContainer>
           </HeroContent>
           <HeroLogoImage
             src="/assets/hero.png"
@@ -35,12 +58,6 @@ const Hero = (): JSX.Element => {
           />
         </Row>
       </Container>
-      <Image
-        src="/assets/polygon_seperator.png"
-        alt="polygon"
-        fill
-        style={{ objectFit: "contain", marginTop: "12em" }}
-      />
     </>
   );
 };

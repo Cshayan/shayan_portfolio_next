@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Container, StyledLink, NavContainer } from "./styles";
+import { Container } from "./styles";
 
 const Navbar = (): JSX.Element => {
   return (
@@ -14,20 +14,6 @@ const Navbar = (): JSX.Element => {
           style={{ objectFit: "contain" }}
         />
       </Link>
-      <NavContainer>
-        <Link href="#about">
-          <StyledLink>About</StyledLink>
-        </Link>
-        <Link href="#experience">
-          <StyledLink>Experience</StyledLink>
-        </Link>
-        <Link href="#skills">
-          <StyledLink>Skills</StyledLink>
-        </Link>
-        <Link href="#contact">
-          <StyledLink>Contact</StyledLink>
-        </Link>
-      </NavContainer>
     </Container>
   );
 };

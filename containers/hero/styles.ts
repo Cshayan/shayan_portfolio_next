@@ -1,6 +1,10 @@
 import Image from "next/image";
 import styled from "styled-components";
 
+interface ITechStackIconContainer {
+  margin?: boolean;
+}
+
 export const Container = styled.section`
   margin-right: 10em;
   margin-left: 3em;
@@ -39,4 +43,15 @@ export const WhiteText = styled.span`
 
 export const ViewButtonWrapper = styled.div`
   margin-top: 1.5em;
+`;
+
+export const TechStackIconContainer = styled.div<ITechStackIconContainer>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: ${(props) => (props.margin ? "2em" : 0)};
+`;
+
+export const TechIcons = styled(Image)`
+  margin: 0 1em;
 `;
