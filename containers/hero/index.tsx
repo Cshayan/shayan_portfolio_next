@@ -1,10 +1,9 @@
 import Button from "@/components/button";
 import Name from "@/components/name";
 import Navbar from "@/components/navbar";
-import { SKILLS_LIST } from "@/constants/data";
+import { RESUME_PDF, SKILLS_LIST } from "@/constants/data";
 import { GreenRegularText } from "@/styles/global-styles";
-import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import {
   HeroLogoImage,
   Row,
@@ -15,11 +14,19 @@ import {
   TechStackIconContainer,
   TechIcons,
 } from "./styles";
+import PdfViewer from "@/components/pdf-viewer";
 
 const Hero = (): JSX.Element => {
+
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+
   const onResumeViewClick = (): void => {
-    window.open("/ShayanChatterjee_Resume.pdf", "_blank");
+    setIsResumeModalOpen(true);
   };
+
+  const onCloseClick = (): void => {
+    setIsResumeModalOpen(false)
+  }
 
   return (
     <>
@@ -34,6 +41,7 @@ const Hero = (): JSX.Element => {
             <ViewButtonWrapper>
               <Button buttonText="View my resume" onClick={onResumeViewClick} />
             </ViewButtonWrapper>
+            <PdfViewer onRequestClose={onCloseClick} isOpen={isResumeModalOpen} pdfUrl={RESUME_PDF} />
             <TechStackIconContainer margin>
               <WhiteText>Tech stack </WhiteText>
               <GreenRegularText style={{ margin: "0 1em" }}>|</GreenRegularText>

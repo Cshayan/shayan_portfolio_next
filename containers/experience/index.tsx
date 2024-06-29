@@ -20,7 +20,7 @@ const Experience = (): JSX.Element => {
           <Seperator text="Experience" />
         </Center>
         <NoOfYearsContainer>
-          <YearsCountText>#02</YearsCountText>
+          <YearsCountText>#03</YearsCountText>
           <YearsText>Years;</YearsText>
         </NoOfYearsContainer>
         <Row>

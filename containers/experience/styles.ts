@@ -63,7 +63,7 @@ export const ExperienceCardStyled = styled.div<IExperienceStyled>`
   margin-right: 3em;
   cursor: pointer;
   outline: solid 0px ${(props) => props.theme.colors.primary};
-  transition: outline 0.4s ease-in;
+  transition: outline 0.1s ease-in;
 
   &:hover {
     outline-width: 2px;
